@@ -122,7 +122,7 @@ const Suggestion3 = frontmatter.youtubersuggestion3
 
 const ContentinVideo = frontmatter.contentinvideo
 
-
+ const playerRef = useRef(null);
 
 
 
@@ -206,9 +206,8 @@ const OriginalUrl = frontmatter.youtuber
       <div>
 
 <ReactPlayer
-
+            ref={playerRef}
             allow="autoplay"
-            ref={useRef}
             style={{position:'absolute', top:'0', zIndex:''}}
             width="100%"
             height="1000px"
