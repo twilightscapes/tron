@@ -116,19 +116,7 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
 
 </div>
 
-{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
-<StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
-</div> */}
 
-          {/* <Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          /> */}
       
      
 {/* Panel Video */}
@@ -139,7 +127,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 {/* Panel Content */}
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'1'}}>
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'', zIndex:'1'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1>
 
@@ -202,7 +190,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/tr
 </Link>
 </div>
 
-<div srl_exclude="true" id="mylink15" className="donation2" style={{position:'relative', transform:'', maxWidth:'', height:'100vh', 
+<div id="" className="donation2" style={{position:'relative', transform:'', maxWidth:'', height:'100vh', 
 // background:'rgba(6, 70, 90, 0.6)', 
 padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 <Link to="/clu/" title="Clu" aria-label="Clu">

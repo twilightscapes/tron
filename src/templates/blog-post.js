@@ -1,7 +1,7 @@
 /** @jsx jsx */
 // import * as React from "react"
 
-import { useRef } from "react";
+// import { useRef } from "react";
 
 // import Controls from "../components/Controls";
 
@@ -122,7 +122,7 @@ const Suggestion3 = frontmatter.youtubersuggestion3
 
 const ContentinVideo = frontmatter.contentinvideo
 
- const playerRef = useRef(null);
+//  const playerRef = useRef(null);
 
 
 
@@ -206,7 +206,7 @@ const OriginalUrl = frontmatter.youtuber
       <div>
 
 <ReactPlayer
-            ref={playerRef}
+            // ref={playerRef}
             allow="autoplay"
             style={{position:'absolute', top:'0', zIndex:''}}
             width="100%"
@@ -243,7 +243,7 @@ const OriginalUrl = frontmatter.youtuber
     return (
 
 <ReactPlayer
-ref={useRef}
+// ref={playerRef}
 
           className='audioframe'
           url={iframeUrl3}
@@ -430,7 +430,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
     <Player
-    ref={useRef}
+    // ref={playerRef}
         youtuber={YouTuber}
         youtubecontrols={YouTubeControls}
         youtubestart={YouTubeStart}
