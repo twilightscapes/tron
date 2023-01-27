@@ -1,6 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import ReactPlayer from "react-player/lazy";
+import { MdPlayArrow } from "react-icons/md"
+import { MdPause } from "react-icons/md"
+import { MdVolumeOff } from "react-icons/md"
+// import { MdVolumeDown } from "react-icons/md"
+import { MdVolumeUp } from "react-icons/md"
 import Layout from "../../components/siteLayout";
 import GoBack from "../../components/goBack";
+
 // import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
@@ -8,8 +15,7 @@ import GoBack from "../../components/goBack";
 // import { StaticImage } from "gatsby-plugin-image"
 // import useSiteMetadata from "../../hooks/SiteMetadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-import ReactPlayer from 'react-player/lazy'
-import Controls from "../../components/Controls"
+
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import { ImPlay } from "react-icons/im"
@@ -35,37 +41,12 @@ import Controls from "../../components/Controls"
 
 
 
-function Marv() {
+const Marv = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemute, youtubeloop, youtubeautostart }) => {
 
    
-   
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
-
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
-
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
-
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
-
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  const [playing, setPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);
+  const [muted, setMuted] = useState(!false);
 
 
 
@@ -75,47 +56,67 @@ function Marv() {
 <Layout>
 
 
+<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
 
 
 
+<ReactPlayer
+        // url={youtuber}
+        url="https://youtu.be/s0fpz3DkCT4"
+        controls={youtubecontrols}
+        start={youtubestart}
+        end={youtubeend}
+        mute={youtubemute}
+        loop={youtubeloop}
+        light={false}
+        autoPlay={youtubeautostart}
+        playsinline
+        playing={playing}
+        volume={volume}
+        muted={muted}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onVolumeChange={value => setVolume(value)}
+        style={{zIndex:'0'}}
 
-      <Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          />
-      <ReactPlayer
-            ref={playerRef}
-            style={{position:'', zIndex:'0'}}
-            width="100%"
-            height="100vh"
-            // url={iframeUrl}
-            url="https://youtu.be/s0fpz3DkCT4"
-            playing={playing}
-            controls={controls}
-            light={light}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, start:0, end:5000, mute:1  }
-              },
-            }}
-          />
 
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:0, end:3, mute:1, loop:1  }
+          },
+        }}
+      />
+      {/* <div style={{position:'absolute', top:'0', zIndex:'2', display:'flex', justifyContent:'space-around', width:'100vw'}}> */}
+
+      <div className="controlsbox" style={{ }}>
+
+        <button onClick={() => setPlaying(!playing)}>
+            {playing ? <MdPause className="hudicon1" style={{fontSize:""}} /> : <MdPlayArrow className="hudicon1" style={{fontSize:""}}  />}
+        </button>
+        <button onClick={() => {
+        setMuted(!muted); 
+        console.log(muted);
+        }}>
+            {muted ? <MdVolumeOff className="hudicon1" style={{fontSize:""}}  /> : <MdVolumeUp className="hudicon1" style={{fontSize:""}}  />}
+        </button>
+        {/* <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            value={volume}
+            onChange={event => {console.log(event.target.value); setVolume(event.target.value)}}
+        /> */}
+    </div>
 
 <div style={{position:'relative', top:'-100px'}}><GoBack /></div>
 
-
+</div>
 </Layout>
 
 

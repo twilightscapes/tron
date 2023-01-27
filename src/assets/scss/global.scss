@@ -1566,6 +1566,19 @@ body.homepage .horizontal-holder{height:250px !important}
 }
 /* HUD CONTROLS */
 
+
+.controlsbox{
+	display:flex;
+	 justify-content:center;
+	 position:absolute;
+	bottom:90px; 
+	right:5vw;
+	width:230px;
+	height:80px;
+	gap:80px;
+	z-index: 1;
+}
+
 @media (min-width: 1300px) {
   .pagination{ bottom:120px !important;}
   } 
@@ -1601,19 +1614,7 @@ body.homepage .horizontal-holder{height:250px !important}
 
 }
 
-.controlsbox{
-	display:flex;
-	 justify-content:center;
-	 position:absolute;
-	bottom:14vh; 
-	right:5vw;
-	width:230px;
-	height:80px;
-	gap:8vw;
-	z-index: 1;
 
-
-}
 
 
 .controls{

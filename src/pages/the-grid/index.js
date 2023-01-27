@@ -1,43 +1,25 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import ReactPlayer from "react-player/lazy";
+import { MdPlayArrow } from "react-icons/md"
+import { MdPause } from "react-icons/md"
+import { MdVolumeOff } from "react-icons/md"
+// import { MdVolumeDown } from "react-icons/md"
+import { MdVolumeUp } from "react-icons/md"
 import Layout from "../../components/siteLayout";
 import GoBack from "../../components/goBack";
-import ReactPlayer from 'react-player/lazy'
-import Controls from "../../components/Controls"
 
 
 
 
 
 
-function TheGrid() {
 
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
 
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
+const TheGrid = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemute, youtubeloop, youtubeautostart }) => {
 
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
-
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
-
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  const [playing, setPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);
+  const [muted, setMuted] = useState(!false);
   
   // const { iconimage } = useSiteMetadata()
 
@@ -55,38 +37,61 @@ function TheGrid() {
 
 
 
-<Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          />
-      <ReactPlayer
-            ref={playerRef}
-            style={{position:'', zIndex:'0'}}
-            width="100%"
-            height="100vh"
-            // url={iframeUrl}
-            url="https://youtu.be/c_V1iD6F1kk"
-            playing={playing}
-            controls={controls}
-            light={light}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1  }
-              },
-            }}
-          />
+
+ 
+            <ReactPlayer
+        // url={youtuber}
+        url="https://youtu.be/c_V1iD6F1kk"
+        controls={youtubecontrols}
+        start={youtubestart}
+        end={youtubeend}
+        mute={youtubemute}
+        loop={youtubeloop}
+        light={false}
+        autoPlay={youtubeautostart}
+        playsinline
+        playing={playing}
+        volume={volume}
+        muted={muted}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onVolumeChange={value => setVolume(value)}
+        style={{zIndex:'0'}}
+
+
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1, loop:1  }
+          },
+        }}
+      />
+      {/* <div style={{position:'absolute', top:'0', zIndex:'2', display:'flex', justifyContent:'space-around', width:'100vw'}}> */}
+
+      <div className="controlsbox" style={{ }}>
+
+        <button onClick={() => setPlaying(!playing)}>
+            {playing ? <MdPause className="hudicon1" style={{fontSize:""}} /> : <MdPlayArrow className="hudicon1" style={{fontSize:""}}  />}
+        </button>
+        <button onClick={() => {
+        setMuted(!muted); 
+        console.log(muted);
+        }}>
+            {muted ? <MdVolumeOff className="hudicon1" style={{fontSize:""}}  /> : <MdVolumeUp className="hudicon1" style={{fontSize:""}}  />}
+        </button>
+        {/* <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            value={volume}
+            onChange={event => {console.log(event.target.value); setVolume(event.target.value)}}
+        /> */}
+    </div>
       
      
 {/* Panel Video */}

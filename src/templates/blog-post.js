@@ -1,9 +1,9 @@
 /** @jsx jsx */
 // import * as React from "react"
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
-import Controls from "../components/Controls";
+// import Controls from "../components/Controls";
 
 import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { jsx } from "theme-ui"
@@ -35,51 +35,7 @@ import { ImPlay } from "react-icons/im"
 import styled from "styled-components"
 const CustomBox = styled.div`
 
-.controlsWrapper: {
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-},
 
-
-
-// .pagination{ position:relative; top:-205px;}
-
-
-@media (max-width: 48em) {
-
-  .pagination{maxWidth:'100vw'}
-}
-
-
-
-
-  // .sidebarIconToggle{bottom:40% !important;}
-
-
-
-  #vert {
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    height:100vh;
-  }
-  #vert section {
-    height:100vh;
-    scroll-snap-align: center;
-    overflow:hidden;
-    background:tranparent !important;
-  }
-
-
-}
 
 
 `
@@ -137,21 +93,12 @@ const Post = ({ data, pageContext }) => {
     : ""
 
 
-  //   const NftLink = frontmatter.nftlink
-  //   const NftRedeem = frontmatter.nftredeem
-  //   const NftDrop = frontmatter.nftdrop
+
 
 
 
   const Svg = frontmatter.svgImage
-  // const svgZindex = frontmatter.svgzindex
 
-// function AddSvg(){
-  
-//   return (
-//     <object className="" id="svg1" data={svgUrl} type="image/svg+xml" style={{position:'', top:'', left:'0', right:'0', bottom:'0', overflow:'', border:'0px solid red', zIndex:'', width:'100vw', height:'', background:'transparent', objectFit:'contain'   }} alt="animated content" title="animated content" ></object>
-//   )
-// }
 
 
 // const IsNft = frontmatter.isnftforsale
@@ -176,7 +123,7 @@ const Suggestion3 = frontmatter.youtubersuggestion3
 const ContentinVideo = frontmatter.contentinvideo
 
 
-// const { youtubecontrols, youtubestart, youtubeend, youtubemute, youtubeloop, youtubeautostart } = data.frontmatter
+
 
 
 
@@ -233,7 +180,7 @@ Add your own in the comments below!
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
 // const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
 // const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
-const iframeUrl = "https://www.youtube-nocookie.com/embed/" + frontmatter.youtuber + ""
+// const iframeUrl = "https://www.youtube-nocookie.com/embed/" + frontmatter.youtuber + ""
   // const YouTube = frontmatter.youtuber
 
 const OriginalUrl = frontmatter.youtuber 
@@ -259,32 +206,13 @@ const OriginalUrl = frontmatter.youtuber
       <div>
 
 <ReactPlayer
+
             allow="autoplay"
-            ref={playerRef}
+            ref={useRef}
             style={{position:'absolute', top:'0', zIndex:''}}
             width="100%"
             height="1000px"
             className='react repo'
-          //       url={[
-          //   iframeUrl,
-          //   Suggestion1,
-          //   Suggestion2,
-          //   Suggestion3
-          // ]}
-          // url={[
-          //   iframeUrl,
-          //   YoutuberSuggestion1,
-          //   YoutuberSuggestion2,
-          //   YoutuberSuggestion3
-          // ]}
-            // url={[YoutubePlaylist, IfSuggestion1, IfSuggestion2, IfSuggestion3]}
-            // url="https://youtu.be/lZzai6at_xA"
-            // url={iframeUrl}
-            // playing={playing}
-            // controls={controls}
-            // light={light}
-            // loop={loop}
-            // muted={muted}
             playsinline
             config={{
               file: {
@@ -316,6 +244,8 @@ const OriginalUrl = frontmatter.youtuber
     return (
 
 <ReactPlayer
+ref={useRef}
+
           className='audioframe'
           url={iframeUrl3}
           // url={[
@@ -370,9 +300,6 @@ const OriginalUrl = frontmatter.youtuber
   }
 
 
-      //  const svgUrl = frontmatter.svgImage.publicURL
-// const svgUrl = "../assets/" + frontmatter.svgImage.publicURL + ""
-// const svgUrl = "../assets/" + frontmatter.svgImage.relativePath + ""
 
   const YouTube2 = frontmatter.youtuber2
   const AudioStart = frontmatter.audiostart
@@ -394,43 +321,8 @@ const OriginalUrl = frontmatter.youtuber
 
 
 
-
-
-  // const [showControls, setShowControls] = useState(false);
-  // const [count, setCount] = useState(0);
-  // const [anchorEl, setAnchorEl] = React.useState(null);
-  // const [state, setState] = useState({
-  //   // playing: YouTubeAutostart,
-  //   // controls: YouTubeControls,
-  //   // light: false,
-  //   // muted: YouTubeMute,
-  //   // loop: YoutubeLoop,
-  // });
-
   const playerRef = useRef(null);
-  // const controlsRef = useRef(null);
 
-  // const {
-  //   playing,
-  //   controls,
-  //   light,
-  //   muted,
-  //   loop,
-  //   played,
-  // } = state;
-
-  // const handlePlayPause = () => {
-  //   setState({ ...state, playing: !state.playing });
-  // };
-
-  // const hanldeMute = () => {
-  //   setState({ ...state, muted: !state.muted });
-  // };
-
-  
-  // const [playing, setPlaying] = useState(false);
-  // const [volume, setVolume] = useState(0.8);
-  // const [muted, setMuted] = useState(false);
 
   return (
     
@@ -453,14 +345,7 @@ const OriginalUrl = frontmatter.youtuber
 
 
 
-{/* <Seo
-          title={`Welcome to the GRID`}
-          description={`I tried to picture clusters of information as they moved through the computer. What did they look like? Ships? Motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd never see.`}
-          image={'https://allin60.com/tronin60.jpg'}
-        /> */}
 
-
-{/* <div className='player-wrapper intro' style={{position:'relative', bottom:'0', zIndex:'', height:'100vh', maxHeight:'', overflow:'', filter: 'drop-shadow(0 0 20px #000)',  }}> */}
 <div id="top"></div>
 
 <div className="pagemenu" style={{position:'fixed', bottom:'20px', zIndex:'1',  left:'20px', right:'', display:'flex', justifyContent:'center', width:'', margin:'0 auto', gap:'20px',
@@ -513,19 +398,6 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
 
-{/* {YouTubeControls ? (
-""
-       
-          ) : (
-            <Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          />
-          )} */}
 
         
 
@@ -556,14 +428,10 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
     
 
 
-    {/* const YouTubeStart = frontmatter.youtubestart
-const YouTubeEnd = frontmatter.youtubeend
-const YouTubeMute = frontmatter.youtubemute
-const YouTubeControls = frontmatter.youtubecontrols
-const YouTubeAutostart = frontmatter.youtubeautostart
-const YoutubeLoop = frontmatter.youtubeloop */}
+
 
     <Player
+    ref={useRef}
         youtuber={YouTuber}
         youtubecontrols={YouTubeControls}
         youtubestart={YouTubeStart}
@@ -574,52 +442,7 @@ const YoutubeLoop = frontmatter.youtubeloop */}
       />
 
 
-{/* <button
-          // onMouseMove={handleMouseMove}
-          // onMouseLeave={hanldeMouseLeave}
-          // ref={playerContainerRef}
-          // className={classes.playerWrapper}
-        >
-          <ReactPlayer
-            allow="autoplay"
-            ref={playerRef}
-            style={{position:'', zIndex:''}}
-            width="100%"
-            height="100%"
-          //       url={[
-          //   iframeUrl,
-          //   Suggestion1,
-          //   Suggestion2,
-          //   Suggestion3
-          // ]}
-          // url={[
-          //   iframeUrl,
-          //   YoutuberSuggestion1,
-          //   YoutuberSuggestion2,
-          //   YoutuberSuggestion3
-          // ]}
-            // url={[YoutubePlaylist, IfSuggestion1, IfSuggestion2, IfSuggestion3]}
-            // url="https://youtu.be/lZzai6at_xA"
-            url={iframeUrl}
-            playing={playing}
-            controls={controls}
-            light={light}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute, loop:YoutubeLoop }
-              },
-            }}
-          
-          />
-</button> */}
+
 
 
 

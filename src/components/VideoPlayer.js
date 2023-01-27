@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { playerRef, useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import { MdPlayArrow } from "react-icons/md"
 import { MdPause } from "react-icons/md"
@@ -20,6 +20,7 @@ const VideoPlayer = ({ youtuber, youtubecontrols, youtubestart, youtubeend, yout
     return (
       <>
       <ReactPlayer
+        ref={playerRef}
         url={youtuber}
         controls={youtubecontrols}
         start={youtubestart}

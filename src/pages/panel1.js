@@ -1,5 +1,10 @@
-import React, { useState, useRef } from "react";
-
+import React, { useState } from "react";
+import ReactPlayer from "react-player/lazy";
+import { MdPlayArrow } from "react-icons/md"
+import { MdPause } from "react-icons/md"
+import { MdVolumeOff } from "react-icons/md"
+// import { MdVolumeDown } from "react-icons/md"
+import { MdVolumeUp } from "react-icons/md"
 
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
@@ -8,9 +13,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import useSiteMetadata from "../hooks/SiteMetadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
-import ReactPlayer from 'react-player/lazy'
+// import ReactPlayer from 'react-player/lazy'
 // import Controls from "../components/Controls"
-import { ImPlay } from "react-icons/im"
+// import { ImPlay } from "react-icons/im"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import QuoraStrike from "../../static/assets/quora-strike.svg"
@@ -43,35 +48,12 @@ const CustomBox = styled.div`
 
 
 
-function Panel1() {
+const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemute, youtubeloop, youtubeautostart }) => {
 
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
 
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
-
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
-
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
-
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  const [playing, setPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);
+  const [muted, setMuted] = useState(!false);
 
 
   
@@ -92,31 +74,41 @@ function Panel1() {
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 <div id="homestart" style={{position:'absolute', top:'-100vh', height:'100vh'}}></div>
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden'}}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', width:'100vw', height:'100vh'}}>https://youtu.be/c_V1iD6F1kktart:20, end:41,
 <ReactPlayer
-            ref={playerRef}
-            style={{position:'', zIndex:'0'}}
-            width="100%"
-            height="100vh"
-            // url={iframeUrl}
-            url="https://youtu.be/c_V1iD6F1kk"
-            playing={playing}
-            controls={controls}
-            light={false}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:41, mute:1  }
-              },
-            }}
-          />
+        // url={youtuber}
+        url="https://youtu.be/c_V1iD6F1kk"
+        controls={youtubecontrols}
+        start={youtubestart}
+        end={youtubeend}
+        mute={youtubemute}
+        loop={youtubeloop}
+        light={false}
+        autoPlay={youtubeautostart}
+        playsinline
+        playing={playing}
+        volume={volume}
+        muted={muted}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onVolumeChange={value => setVolume(value)}
+        style={{zIndex:'0'}}
+
+
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1, loop:1  }
+          },
+        }}
+      />
+      {/* <div style={{position:'absolute', top:'0', zIndex:'2', display:'flex', justifyContent:'space-around', width:'100vw'}}> */}
+
+      
 
 
 
