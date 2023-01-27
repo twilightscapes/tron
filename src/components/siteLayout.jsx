@@ -9,8 +9,8 @@ import "../assets/scss/styles.css"
 // import { AnchorLink } from "gatsby-plugin-anchor-links"
 // import { StoreContext } from "../context/store-context"
 // import { Toast } from "./toast"
-import Bug from "../../static/assets/logo.svg"
-import SiteLogo from "../../static/assets/logo.svg"
+// import Bug from "../../static/assets/logo.svg"
+// import SiteLogo from "../../static/assets/logo.svg"
 // import Install from './install-discount'
 import Theme from "./theme"
 // import { CartButton } from "./cart-button"
@@ -67,142 +67,271 @@ const TemplateWrapper = ({ children }) => {
 
 
 
-<header id="top" name="pagetop" style={{}} >
+<header name="pagetop" style={{}} >
 
-{/* <ul id="menu" className="menu" style={{position:'fixed', width:'100vw', top:'0', zIndex:'10', display:'flex', justifyContent:'space-around', fontSize:'clamp(.8rem, 2.3vw, 2.5rem)', gap:'10px', textAlign:'center', background:'radial-gradient(#111 14%,#222 140%)', color:'#ccc', boxShadow:'0 0 24px rgba(0,0,0,.9)', padding:'0 .5rem', alignItems:'center'}}>
-<li className="grad" style={{position:'relative',}}>
-        <AnchorLink className="navbar-item" to="/#about" style={{paddingRight:'',}}>
-          About <span className="mobilehide">Us</span> 
-        </AnchorLink>
-        </li>
-      <li className="grad" style={{position:'relative',}}>
-      <AnchorLink className="navbar-item" to="/#capabilities" style={{paddingRight:'',}}>
-      <span className="mobilehide">Our</span> Capabilities 
-      </AnchorLink>
-      </li>
-      <li className="grad" style={{position:'relative', maxHeight:'60px'}}>
-      <AnchorLink to="/#top" name="homereturn" style={{position:'absolute', display:'block', width:'180px', height:'60px', border:'1px solid'}}  aria-label="Link to Home" title="Back to Home">
-      <SiteLogo style={{maxHeight:'60px'}} />
-      </AnchorLink>
-    </li>
-      <li className="grad" style={{position:'relative',}}>
-        <AnchorLink className="navbar-item" to="/#industries" style={{paddingRight:'',}}>
-          Industries <span className="mobilehide">Served</span> 
-        </AnchorLink>
-        </li>
-        <li className="grad" style={{position:'relative',}}>
-        <AnchorLink to="/#contact" className="navbar-item" style={{paddingRight:'',}}>
-          Contact <span className="mobilehide">Us</span>
-        </AnchorLink>
-        </li>
-      </ul> */}
+{/* <Link to="/"><img id="logo" className="twlogo1" src={twLogo} alt="Twilightscapes Logo" style={{margin:'16px 0 40px 4vw', minWidth:'100px', maxWidth:'100px', height:'auto', padding:'0', border:'0px solid red', position:'fixed', zIndex:'2'}} /></Link> */}
+
+
+
+
 
 
 
       <input type="checkbox" className="openSidebarMenu" id="openSidebarMenu" />
 
-{/* <div id="secondMenu" className="" style={{marginTop:'5rem'}}>
-<ul className="sidebarMenuInner post-card" style={{}}>
-<Install />
-<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
-Woot
-</li>
-<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
-This is 2nd menu
-</li>
 
-</ul>
-</div> */}
-<>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */ }</>
-  <label htmlFor="openSidebarMenu" className="backdrop1" ><input type="checkbox" /></label>
-
-<label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
-<div style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'500px', color:'#fff', border:'0px solid blue'}}>
-{/* <img className="" src={iconimage} alt="Logo" style={{borderRadius:'12px'}} /> */}
-<Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'1', margin:'0 0 0 0', width:'100%', display:'' }}/> 
-{/* <object className="" id="logo" data={iconimage} type="image/svg+xml" style={{  overflow:'hidden', border:'0px solid red', zIndex:'0', width:'100%', maxWidth:'', height:'', background:'transparent'  }} alt="Animated Logo" title="Animated Logo" >Animated Logo</object> */}
+      <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle">
+<div className="TRON" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'12px', fontSize:'clamp(3rem, 4.5vw, 4.8rem)'}}>
+[
 </div>
+
+{/* <div style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'80px', color:'#fff', borderRadius:'12px'}}>
+<StaticImage className="" src="../../static/assets/TSidebarHover.svg" alt="Logo" style={{borderRadius:''}} /></div> */}
   </label>
 
-  
-  {/* <Install /> */}
+  {/* <label id="menuicon" htmlFor="openSidebarMenu" className="sidebarIconToggle"> */}
+
+  {/* <div className="cornertext" style={{textShadow:'2px', color:'#fff',}}>
+  <IoMdFingerPrint style={{fontSize:'50px', }}/>
+ <span><br />TAP CORNER<br /> FOR MENU<br />
+</span>
+    </div> */}
 
 
 
 
-   <div id="sidebarMenu" style={{minWidth:'', width:'',}}>
+{/* <IoMdFingerPrint style={{fontSize:'60px', margin:'0 20px 0 0' }}/> */}
+{/* <Bug className="bug" style={{fontSize:'38px', maxWidth:'', opacity:'.4', margin:'100px 0 0 0', width:'100%' }}/> */}
+{/* <div style={{textAlign:'center'}}>MENU</div> */}
+    {/* <div className="spinner diagonal part-1"></div>
+    <div className="spinner horizontal"></div>
+    <div className="spinner diagonal part-2"></div> */}
+  {/* </label> */}
+
+
+  <label htmlFor="openSidebarMenu" className="backdrop1" aria-label="Return To Home" ></label>
+
+
+   <div id="sidebarMenu" style={{minWidth:'', width:''}}>
   
 {/* <div className="no-app promocode">
 30% OFF CODE: <span style={{color:'var(--primary-color)', fontWeight:'bold'}}>LoveTheNight</span>
 </div> */}
 
-  
-
-<ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
-
-<li className="carto" style={{border:'none', margin:' 0', textAlign:'center'}}>
-<Link to="/" name="homereturn" title="return to home" style={{position:'absolute', display:'block', width:'180px', height:'180px', border:'0px solid'}}></Link>
-<SiteLogo />
-</li>
 
 
-<li className="carto" style={{textAlign:''}}>
-              <Link className="navbar-item txtshadow" to="/projects">
-      <div style={{display:'flex', gap:'10px'}}>
-        {/* <AiOutlineFundProjectionScreen style={{fontSize:'2vw'}} /> */}
-        View By Project
-        </div>
-              </Link>
-      </li> 
 
 
-<li className="carto">
-      <Link className="navbar-item txtshadow" to="/minutes/">
-      <div style={{display:'flex', gap:'10px'}}>
-      View All Minutes
-      </div>
-        </Link>
-</li>
 
-{/* <li className="carto" style={{textAlign:'center'}}>
-      <Link className="navbar-item txtshadow" to="/minutes/">
-      <div style={{display:'flex', gap:'10px'}}>
-      Current Minutes
-      </div>
-        </Link>
+
+
+
+
+
+
+
+
+	
+
+    
+
+
+
+
+    <ul className="sidebarMenuInner post-card" style={{maxWidth:'400px', position:'absolute', right:'0', display:'', justifyContent:''}}>
+
+
+
+
+ {/* <li className="carta" style={{border:'none', margin:'1rem 0',textAlign:'center'}}>
+<Link title="Return To Home" to="/#homestart" aria-label="Return To Home"> 
+<div className="TRON tronlogo" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'0', fontSize:'clamp(4rem, 6vw, 5.8rem)', margin:'1rem 0 0 0'}}>[</div>
+</Link>
+ </li> */}
+
+<li className="carto" style={{border:'none', margin:'0 0',textAlign:'center'}}>
+<Link title="Return To Home" to="/#homestart" aria-label="Return To Home"> 
+<div className="TronType tronText" style={{fontSize:'250%', margin:'0 0 0 0'}}>TRON</div><div className="defont" style={{fontSize:'200%', fontWeight:'bold', color:'rgb(0, 225, 255)'}}>in 60</div><div className="TRON tronText" style={{fontSize:'100%', margin:'0 0 1rem 0'}}>Seconds</div>
+{/* <div className="TRON tronlogo" style={{textAlign:'center', opacity:'1', textShadow:'2px 2px 10px 2px #000', maxWidth:'', color:'#fff', borderRadius:'0', fontSize:'clamp(4rem, 6vw, 5.8rem)', margin:'1rem 0 0 0'}}>[</div> */}
+{/* 
+  <span>More Coming Soon</span> */}
+</Link>
+ </li>
+
+
+
+
+
+ 
+ {/* <li className="carta" style={{border:'none', marginBottom:'1rem'}}>
+ <a className="" onClick={()=>navigate(-1)}><img id="logo" className="twlogo" src={twLogo} alt="Twilightscapes Logo" title="Return To Homepage" style={{minWidth:'100px', maxWidth:'',}} /></a>
+ </li> */}
+
+
+
+
+ {/* <li className="carto">
+ <Link className="navbar-item txtshadow" to="/contact/">
+Contact Me<span>I love hearing from you!</span>
+</Link>
+</li> */}
+
+
+
+{/* <li className="carta">
+ <Link className="navbar-item txtshadow" to="/contact/">
+Contact Me<span>Ordering Questions?</span>
+</Link>
 </li> */}
 
 
 
 
-<li className="carto" style={{textAlign:'', pointerEvents:'none'}}>
-          <Link className="navbar-item txtshadow" to="/about/">
-
-          About This Site
-
-          </Link>
-  </li> 
+      {/* <li className="carto">
+      <Link className="navbar-item txtshadow" to="/photo-tools/">Twilight Tools<span>Lighting and Gear</span></Link>
+       </li> */}
 
 
+      {/* <li className="carto">
+              <Link className="navbar-item txtshadow" to="/about/">
+                About Todd Lambert<span>As seen on reality TV</span>
+              </Link>
+      </li> */}
+
+      {/* <li className="carto">
+      <Link className="navbar-item txtshadow" to="/posts/">Posts<span>My rants &amp; raves</span></Link>
+       </li> */}
 
 
-  <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' , background:'rgba(0,0,0,0)' }}>
+      
 
-  <Theme  style={{padding:'0'}} />
-{/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
-<span className="carto"><SearchIcon /></span>
-</Link>
+{/*
+      <li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/minutes/" style={{color:'#02e9fa'}}>
+              View Latest Minutes
+              </Link>
+      </li>
 
-<CartButton quantity={quantity} /> */}
+ */}
 
 
-    </li>
+<div style={{background:'rgba(0,0,0,0.20)'}}>
+  
+<li className="carto" style={{textAlign:'', color:'', cursor:'', background:'rgba(0,0,0,0.40)'}}>
+              <a className="navbar-item txtshadow" href="/enter-the-grid/">
+              Enter the Grid
+              </a>
+      </li>
+      
+{/* <li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/the-grid#proceed">
+              Proceed to Games
+              </Link>
+      </li> */}
 
-</ul>
+      <li className="carto" style={{textAlign:''}}>
+              <a className="navbar-item txtshadow" href="/lightdisc-grid/" style={{color:'',}}>
+              LightDisc Grid
+              </a>
+      </li>
+
+      <li className="carto" style={{textAlign:''}}>
+              <a className="navbar-item txtshadow" href="/lightcycle-grid/" style={{color:''}}>
+              LightCycle Grid
+              </a>
+      </li>
+
+
+      <li className="carto" style={{textAlign:''}}>
+              <a className="navbar-item txtshadow" href="/end-of-line-club/" style={{color:''}}>
+              End of Line Club
+              </a>
+      </li>
+
+      <li className="carto" style={{textAlign:''}}>
+              <a className="navbar-item txtshadow" href="/return-to-the-source/" style={{color:''}}>
+              Return to the Source
+              </a>
+      </li>
+
+
+      <li className="carto" style={{textAlign:''}}>
+              <a className="navbar-item txtshadow" href="/end-of-the-grid/" style={{color:''}}>
+              End of the Grid
+              </a>
+      </li>
+
+
+
+
+      {/* <li className="carto">
+              <Link className="navbar-item txtshadow" to="/nft/">
+                NFT Collectibles <span>Limited Editions</span>
+              </Link>
+      </li> */}
+
+      
+{/* <li className="carto" style={{textAlign:'center'}}>
+              <Link className="navbar-item txtshadow" to="/experiences/">
+              <span style={{color:'var(--primary-color)',}}>(All New)</span>3D Experiences
+                 Multimedia 3D Blog
+              </Link>
+      </li> */}
+
+
+<li className="carto" style={{textAlign:'center', background:'rgba(0,0,0,0.20)'}}>
+              <a className="navbar-item txtshadow" href="/about/">
+              About This Site
+              </a>
+      </li> 
+      </div>
+    
+      {/* <li className="carta">
+      <div style={{display:'flex', justifyContent:'center'}}>
+<button className="back" onClick={()=>navigate(-1)} style={{padding:'4px 8px', borderRadius:'12px'}}>
+        <span className="icon -left" style={{paddingRight:'1rem'}}>
+                <BiLeftArrow />
+        </span> 
+        {" "} Continue Choosing 
+</button>
+</div>
+      </li> */}
+
+      
+
+      <li className="carto crypto" style={{border:'none', display:'flex', justifyContent:'space-around', verticalAlign:'center', padding:'5px 0 0 0' ,  }}>
+  
+      <Theme  style={{padding:'0'}} />
+   {/* <Link className="sherlock" to="/search/" style={{marginRight:'0', marginTop:'5px'}}>
+    <span className="carto"><SearchIcon /></span>
+   </Link> */}
+   
+  {/* <div className="carto"><CartButton quantity={quantity} /></div> */}
+
+
+        </li>
+
+    
+
+    </ul>
+
+
+
+
+
 
   </div>
 
-      {/* <Toast show={loading || didJustAddToCart} >
+
+
+
+
+
+
+
+
+ {/*
+      <Toast show={loading || didJustAddToCart} >
         {!didJustAddToCart ? (
           "Updating…"
         ) : (
@@ -211,14 +340,21 @@ This is 2nd menu
             <div style={{fontSize:'30px', marginLeft:'10px'}}><ImArrowRight /></div>
           </>
         )}
-      </Toast> */}
- 
+      </Toast>
+  */}
+
+
+
       {/* <Link to="/search" style={{display:'flex', verticalAlign:'center', marginTop:'12px', marginRight:'20px'}}>
     <span><SearchIcon /></span>
    </Link>
 
   <div style={{marginTop:'5px'}}><CartButton quantity={quantity} /></div> */}
      
+
+
+     
+
 </header>
 {children}
 

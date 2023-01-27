@@ -2,7 +2,7 @@
 template: blog-post
 title: Enter The Grid
 slug: /enter-the-grid
-date: 2023-01-03 01:23
+date: 2021-01-03 01:23
 description: Kevin Flynn describes the Grid.
 youtuber: "https://youtu.be/CKygRPp5-v0"
 youtuber2: ""

@@ -1,8 +1,8 @@
-
 @font-face {
-  font-family: "Compacta";
-  font-style: normal;
-  src: url("unicode.compacta.woff2");
-  font-weight: 400;
-  font-display: swap;
+  font-family: "TRON";
+  src: url("TRON.woff2");
+}
+@font-face {
+  font-family: "TronType";
+  src: url("TronType.woff2");
 }

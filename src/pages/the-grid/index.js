@@ -1,18 +1,16 @@
 import React, { useState, useRef } from "react";
-// import useSiteMetadata from "../hooks/SiteMetadata"
-import ReactPlayer from "react-player/lazy";
-// import { ImPlay } from "react-icons/im"
-// import { StaticImage } from "gatsby-plugin-image"
-import Controls from "../components/Controls";
-// import {Link} from "gatsby"
-import GoBack from "../components/goBack";
-
-import Layout from "../components/siteLayout"
+import Layout from "../../components/siteLayout";
+import GoBack from "../../components/goBack";
+import ReactPlayer from 'react-player/lazy'
+import Controls from "../../components/Controls"
 
 
-function Double() {
 
-  
+
+
+
+function TheGrid() {
+
   const [state, setState] = useState({
     playing: true,
     controls: true,
@@ -40,32 +38,24 @@ function Double() {
   const hanldeMute = () => {
     setState({ ...state, muted: !state.muted });
   };
-
-
+  
+  // const { iconimage } = useSiteMetadata()
 
   return (
-
+  
 
 <Layout>
+{/* GRID INTRO */}
 
+<div id="" className="wrap-element tronpanel" style={{position:'fixed', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
 
-
-<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'5vw', position:'absolute', top:'1vh', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'5'}}>
-        <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>THE SIRENS</div>
+<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
+        <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
       </h1>
 
 
 
-   
-
-
-
-
-<div className="wrap-element" style={{overflow:'hidden', position:'relative', top:'0'}}></div>
-
-
-      <Controls
+<Controls
             ref={controlsRef}
             onPlayPause={handlePlayPause}
             playing={playing}
@@ -79,7 +69,7 @@ function Double() {
             width="100%"
             height="100vh"
             // url={iframeUrl}
-            url="https://youtu.be/yyovIAXi5mc"
+            url="https://youtu.be/c_V1iD6F1kk"
             playing={playing}
             controls={controls}
             light={light}
@@ -97,20 +87,22 @@ function Double() {
               },
             }}
           />
-
-
-<div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', maxWidth:'30vw', height:'50vh',}}>
-
-
-
-
-<object style={{height:'100%', bottom:'0', transform:'scaleX(-1)'}} class="" id="svg1" data="/assets/tron-chick1.svg" type="image/svg+xml" alt="animated content" title="animated content" ></object>
+      
+     
+{/* Panel Video */}
 
 
 
 
 
-</div>
+
+{/* Panel Content */}
+
+
+
+ 
+
+
 
 
 <div style={{position:'relative', top:'-100px'}}><GoBack /></div>
@@ -119,10 +111,16 @@ function Double() {
 </Layout>
 
 
+
+
+
+
+
+
+
+
+
   );
 }
 
-export default Double;
-
-
-// https://youtu.be/NmzuHjWmXOc
+export default TheGrid;

@@ -2,9 +2,9 @@
 template: blog-post
 title: Proceed To Games
 slug: /proceed-to-games
-date: 2023-06-01 01:23
+date: 2021-06-01 01:23
 description: Meet the Sirens
-youtuber: "Y7EZBP9j7h0"
+youtuber: "https://youtu.be/Y7EZBP9j7h0"
 youtuber2: ""
 youtubeshoworiginal: "1"
 youtubersuggestion1: ""
@@ -44,7 +44,7 @@ contentinvideo: true
   <br />
   <p>Mirroring complete. Disk Activated.</p>
   <br />
-  <p class="TRON txtshadow tronText actionJackson" style="cursor:pointer; margin:0 auto; padding: 0; text-decoration:none; text-shadow:3px 3px 6px rgb(0, 162, 184); font-size:80%;"><a href="/lightdisc-grid/" style="position:relative;">Proceed to games.</a></p>
+  <p class="TRON txtshadow tronText actionJackson" style="cursor:pointer; margin:0 auto; padding: 10px 0; text-decoration:none; text-shadow:3px 3px 6px rgb(0, 162, 184); font-size:80%; border-radius:12px;"><a href="/lightdisc-grid/" style="position:relative;">Proceed to games.</a></p>
 </div>
 
 

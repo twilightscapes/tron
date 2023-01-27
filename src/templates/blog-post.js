@@ -16,7 +16,7 @@ import CommentBox from "../components/commentbox"
 // import { StaticImage } from "gatsby-plugin-image"
 import useSiteMetadata from "../hooks/SiteMetadata"
 // import Countdown from 'react-countdown'
-
+import Player from "../components/VideoPlayer";
 import { RxDoubleArrowUp } from "react-icons/rx"
 // import { IoArrowRedoSharp, IoArrowUndoSharp } from "react-icons/io5"
 import { AiOutlineAudioMuted } from "react-icons/ai"
@@ -159,19 +159,25 @@ const ShowOriginal = frontmatter.youtubeshoworiginal
 const ShareThis = frontmatter.shareable
 const Comments = frontmatter.comments
 
+const YouTuber = frontmatter.youtuber
 const YouTubeStart = frontmatter.youtubestart
 const YouTubeEnd = frontmatter.youtubeend
 const YouTubeMute = frontmatter.youtubemute
 const YouTubeControls = frontmatter.youtubecontrols
 const YouTubeAutostart = frontmatter.youtubeautostart
+const YoutubeLoop = frontmatter.youtubeloop
 
 const Suggestion1 = frontmatter.youtubersuggestion1
 const Suggestion2 = frontmatter.youtubersuggestion2
 const Suggestion3 = frontmatter.youtubersuggestion3
 
-const YoutubeLoop = frontmatter.youtubeloop
+
 
 const ContentinVideo = frontmatter.contentinvideo
+
+
+// const { youtubecontrols, youtubestart, youtubeend, youtubemute, youtubeloop, youtubeautostart } = data.frontmatter
+
 
 
 if (Suggestion1) {
@@ -225,8 +231,8 @@ Add your own in the comments below!
 }
 
 const YoutuberSuggestion1 = frontmatter.youtubersuggestion1
-const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
-const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
+// const YoutuberSuggestion2 = frontmatter.youtubersuggestion2
+// const YoutuberSuggestion3 = frontmatter.youtubersuggestion3
 const iframeUrl = "https://www.youtube-nocookie.com/embed/" + frontmatter.youtuber + ""
   // const YouTube = frontmatter.youtuber
 
@@ -274,11 +280,11 @@ const OriginalUrl = frontmatter.youtuber
             // url={[YoutubePlaylist, IfSuggestion1, IfSuggestion2, IfSuggestion3]}
             // url="https://youtu.be/lZzai6at_xA"
             // url={iframeUrl}
-            playing={playing}
-            controls={controls}
-            light={light}
-            loop={loop}
-            muted={muted}
+            // playing={playing}
+            // controls={controls}
+            // light={light}
+            // loop={loop}
+            // muted={muted}
             playsinline
             config={{
               file: {
@@ -286,9 +292,9 @@ const OriginalUrl = frontmatter.youtuber
                   crossorigin: "anonymous",
                 },
               },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute, loop:YoutubeLoop }
-              },
+              // youtube: {
+              //   playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute, loop:YoutubeLoop }
+              // },
             }}
           
           />
@@ -384,7 +390,7 @@ const OriginalUrl = frontmatter.youtuber
 
 
   const { siteUrl } = useSiteMetadata()
-  const { iconimage } = useSiteMetadata()
+  // const { iconimage } = useSiteMetadata()
 
 
 
@@ -393,35 +399,38 @@ const OriginalUrl = frontmatter.youtuber
   // const [showControls, setShowControls] = useState(false);
   // const [count, setCount] = useState(0);
   // const [anchorEl, setAnchorEl] = React.useState(null);
-  const [state, setState] = useState({
-    playing: YouTubeAutostart,
-    controls: YouTubeControls,
-    light: false,
-    muted: YouTubeMute,
-    loop: YoutubeLoop,
-  });
+  // const [state, setState] = useState({
+  //   // playing: YouTubeAutostart,
+  //   // controls: YouTubeControls,
+  //   // light: false,
+  //   // muted: YouTubeMute,
+  //   // loop: YoutubeLoop,
+  // });
 
   const playerRef = useRef(null);
-  const controlsRef = useRef(null);
+  // const controlsRef = useRef(null);
 
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
+  // const {
+  //   playing,
+  //   controls,
+  //   light,
+  //   muted,
+  //   loop,
+  //   played,
+  // } = state;
 
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
+  // const handlePlayPause = () => {
+  //   setState({ ...state, playing: !state.playing });
+  // };
 
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
+  // const hanldeMute = () => {
+  //   setState({ ...state, muted: !state.muted });
+  // };
 
   
+  // const [playing, setPlaying] = useState(false);
+  // const [volume, setVolume] = useState(0.8);
+  // const [muted, setMuted] = useState(false);
 
   return (
     
@@ -504,7 +513,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
 
-{YouTubeControls ? (
+{/* {YouTubeControls ? (
 ""
        
           ) : (
@@ -516,7 +525,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
             onMute={hanldeMute}
             muted={muted}
           />
-          )}
+          )} */}
 
         
 
@@ -547,7 +556,25 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
     
 
 
-<button
+    {/* const YouTubeStart = frontmatter.youtubestart
+const YouTubeEnd = frontmatter.youtubeend
+const YouTubeMute = frontmatter.youtubemute
+const YouTubeControls = frontmatter.youtubecontrols
+const YouTubeAutostart = frontmatter.youtubeautostart
+const YoutubeLoop = frontmatter.youtubeloop */}
+
+    <Player
+        youtuber={YouTuber}
+        youtubecontrols={YouTubeControls}
+        youtubestart={YouTubeStart}
+        youtubeend={YouTubeEnd}
+        youtubemute={YouTubeMute}
+        youtubeloop={YoutubeLoop}
+        youtubeautostart={YouTubeAutostart}
+      />
+
+
+{/* <button
           // onMouseMove={handleMouseMove}
           // onMouseLeave={hanldeMouseLeave}
           // ref={playerContainerRef}
@@ -592,7 +619,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
             }}
           
           />
-</button>
+</button> */}
 
 
 
