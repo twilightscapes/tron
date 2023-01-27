@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ReactPlayer from "react-player/lazy";
-import { MdPlayArrow } from "react-icons/md"
-import { MdPause } from "react-icons/md"
-import { MdVolumeOff } from "react-icons/md"
+
 // import { MdVolumeDown } from "react-icons/md"
-import { MdVolumeUp } from "react-icons/md"
+
 
 import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import useSiteMetadata from "../hooks/SiteMetadata"
+// import useSiteMetadata from "../hooks/SiteMetadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 // import ReactPlayer from 'react-player/lazy'
 // import Controls from "../components/Controls"
@@ -53,11 +51,11 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
 
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(1);
-  const [muted, setMuted] = useState(!false);
+  // const [muted, setMuted] = useState(!false);
 
 
   
-  const { iconimage } = useSiteMetadata()
+  // const { iconimage } = useSiteMetadata()
 
   return (
   
@@ -67,32 +65,34 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
 
 
 
-{/* Panel Video */}
-{/* <div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
-<div className="video-background">
-<div className="video-foreground"> */}
+
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 <div id="homestart" style={{position:'absolute', top:'-100vh', height:'100vh'}}></div>
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', width:'100vw', height:'100vh'}}>https://youtu.be/c_V1iD6F1kktart:20, end:41,
+<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', width:'100vw', height:'100vh'}}>
+
+
+
+
 <ReactPlayer
+        // ref={useRef}
         // url={youtuber}
         url="https://youtu.be/c_V1iD6F1kk"
         controls={youtubecontrols}
         start={youtubestart}
         end={youtubeend}
         mute={youtubemute}
-        loop={youtubeloop}
+        loop={true}
         light={false}
-        autoPlay={youtubeautostart}
+        autoPlay={true}
         playsinline
         playing={playing}
         volume={volume}
-        muted={muted}
+        muted={true}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
         onVolumeChange={value => setVolume(value)}
-        style={{zIndex:'0'}}
+        style={{zIndex:'0', background:'transparent', opacity:'.6'}}
 
 
         config={{
@@ -102,7 +102,7 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
             },
           },
           youtube: {
-            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1, loop:1  }
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:29, mute:1, loop:1  }
           },
         }}
       />

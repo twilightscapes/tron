@@ -1,14 +1,15 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Layout from "../components/siteLayout"
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import useSiteMetadata from "../hooks/SiteMetadata"
+// import useSiteMetadata from "../hooks/SiteMetadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
+// import Player from "../components/VideoPlayer";
 // import Controls from "../components/Controls"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
@@ -47,33 +48,7 @@ const CustomBox = styled.div`
 function CluPage() {
 
 
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
 
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
-
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
-
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
-
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
 
 
   
@@ -87,47 +62,31 @@ function CluPage() {
 {/* GRID INTRO */}
 
 
-{/* Panel Video */}
-{/* <div className="vidbox" style={{position:'absolute', height:'100vh', width:'100vw', bottom:'0', zIndex:''}}>
-<div className="video-background">
-<div className="video-foreground"> */}
-{/* c_V1iD6F1kk */}
-{/* nJ38P5elTkg */}
-{/* <div id="homestart" style={{position:'absolute', top:'-100vh'}}></div> */}
+
 <div id="" className="wrap-element tronpanel" style={{overflow:'', height:'100vh'}}>
 
-{/* <Controls
-            ref={controlsRef}
-            onPlayPause={handlePlayPause}
-            playing={playing}
-            played={played}
-            onMute={hanldeMute}
-            muted={muted}
-          /> */}
-      <ReactPlayer
-            ref={playerRef}
-            style={{position:'', zIndex:'0'}}
-            width="100%"
-            height="100vh"
-            // url={iframeUrl}
-            url="https://youtu.be/c_V1iD6F1kk"
-            playing={playing}
-            controls={controls}
-            light={light}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1  }
-              },
-            }}
-          />
+
+
+<ReactPlayer
+        // url={youtuber}
+        url="https://youtu.be/c_V1iD6F1kk"
+        light={false}
+        playsinline
+
+        style={{zIndex:'0',}}
+
+
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1, loop:1  }
+          },
+        }}
+      />
       
      
 {/* Panel Video */}
@@ -156,7 +115,7 @@ function CluPage() {
 
  
     
-<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'', position:'relative', width:'100vw' }}>
+<div style={{display:'flex', flexDirection:'row', justifyContent:'space-around', zIndex:'-2', position:'relative', width:'100vw' }}>
 
     
     
@@ -173,7 +132,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
     <div className="" style={{display:'flex', gap:'', justifyContent:'', position:'absolute', left:'10vw',  marginTop:'10vh', marginRight:''}}>
 
 <div>
-<h1 className="tronText" style={{paddingTop:'8vh', fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h1>
+<h2 className="tronText" style={{paddingTop:'8vh', fontSize:'clamp(2rem, 3vw, 3rem)'}}>CLU</h2>
 <ul style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', listStyle:'none', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px', maxWidth:'40vw'}}>
 <li><strong>Actor:</strong> Jeff Bridges</li>
 <li><strong>User:</strong> Kevin Flynn</li>
@@ -194,9 +153,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
 
-
-
-
 </div>
 
 
@@ -205,7 +161,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
       
       </div>
 
-
       </div>
 
       </div>
@@ -213,11 +168,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
       </div>
 
       </div>
-    
-    
-
-
-   
     
       </div>
 

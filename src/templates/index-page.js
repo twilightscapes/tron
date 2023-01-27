@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { graphql } from "gatsby"
 import ReactPlayer from 'react-player/lazy'
 import Layout from "../components/siteLayout"
 import Seo from "../components/seo"
-import { ImPlay } from "react-icons/im"
+// import { ImPlay } from "react-icons/im"
 // import { StaticImage } from "gatsby-plugin-image"
 
 import { Helmet } from "react-helmet"
@@ -193,35 +193,9 @@ const HomePage = ({ data }) => {
     
 
 
-    const [state, setState] = useState({
-      playing: true,
-      controls: true,
-      light: false,
-      muted: true,
-      loop: true,
-    });
-  
-    const playerRef = useRef(null);
-    const controlsRef = useRef(null);
-  
-    const {
-      playing,
-      controls,
-      light,
-      muted,
-      loop,
-      played,
-    } = state;
-  
-    const handlePlayPause = () => {
-      setState({ ...state, playing: !state.playing });
-    };
-  
-    const hanldeMute = () => {
-      setState({ ...state, muted: !state.muted });
-    };
+
     
-    const { iconimage } = useSiteMetadata()
+    // const { iconimage } = useSiteMetadata()
 
  
 
@@ -280,30 +254,30 @@ const HomePage = ({ data }) => {
 
 <div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0', borderRadius:'12px',}}>
 
-<ReactPlayer
-            ref={playerRef}
-            style={{position:'', zIndex:'0'}}
-            width="100%"
-            height="100vh"
-            // url={iframeUrl}
-            url="https://youtu.be/LltRzgvyrps"
-            playing={playing}
-            controls={controls}
-            light={false}
-            loop={loop}
-            muted={muted}
-            playsinline
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, autoplay:1, controls:0, start:0, end:5000, mute:1  }
-              },
-            }}
-          /></div>
+
+          <ReactPlayer
+          // url={youtuber}
+        url="https://youtu.be/LltRzgvyrps"
+        light={false}
+        playsinline
+        loop={true}
+        autoPlay={true}
+        muted={true}
+        style={{zIndex:'0',}}
+
+
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:0, end:5000, mute:1, loop:1  }
+          },
+        }}
+      />
+  </div>
 
 
 <div className="horizontal-scroll panels sitegrad movingBG" style={{}}>

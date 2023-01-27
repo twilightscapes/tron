@@ -1,16 +1,16 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import Layout from "../components/siteLayout";
 
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 // import { graphql } from "gatsby"
 // import { GatsbyImage } from 'gatsby-plugin-image'
 // import TwilightLogo from "../../static/assets/logo.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import useSiteMetadata from "../hooks/SiteMetadata"
+// import useSiteMetadata from "../hooks/SiteMetadata"
 // import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import ReactPlayer from 'react-player/lazy'
 // import Controls from "../components/Controls"
-import { ImPlay } from "react-icons/im"
+// import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
 // import { ImPlay } from "react-icons/im"
 // import LightCycle from "../../static/assets/light-cycle.svg"
@@ -46,34 +46,8 @@ const CustomBox = styled.div`
 
 function SamPage() {
 
-  const [state, setState] = useState({
-    playing: true,
-    controls: true,
-    light: false,
-    muted: true,
-    loop: true,
-  });
-
-  const playerRef = useRef(null);
-  const controlsRef = useRef(null);
-
-  const {
-    playing,
-    controls,
-    light,
-    muted,
-    loop,
-    played,
-  } = state;
-
-  const handlePlayPause = () => {
-    setState({ ...state, playing: !state.playing });
-  };
-
-  const hanldeMute = () => {
-    setState({ ...state, muted: !state.muted });
-  };
-  const { iconimage } = useSiteMetadata()
+  
+  // const { iconimage } = useSiteMetadata()
 
   return (
   
@@ -93,59 +67,27 @@ function SamPage() {
 <div id="" className="wrap-element tronpanel" style={{overflow:'', height:'100vh'}}>
   
 <ReactPlayer
-         className='frontbg'
-         url="https://www.youtube.com/embed/c_V1iD6F1kk"
-         width="100%"
-         height="100vh"
-         style={{position:'fixed', top:'0', zIndex:'-1'}}
-         playing={playing}
-            controls={false}
-            light={false}
-            loop={loop}
-            muted={muted}
-            config={{
-              file: {
-                attributes: {
-                  crossorigin: "anonymous",
-                },
-              },
-              youtube: {
-                playerVars: { showinfo:0, controls:0, start:20, end:41, mute:1 }
-              },
-            }}
+          // url={youtuber}
+        url="https://youtu.be/c_V1iD6F1kk"
+        light={false}
+        playsinline
 
-          playsinline
-          playIcon={
-            <button aria-label="Click To Play" className="clickplay" style={{position:'', zIndex:'1', bottom:'0', border:'0px solid red', width:'100vw', height:'100vh', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'columh', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
-
-        <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
-          
-
-          <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-  <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
-</div>
-      
-          <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
-  <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} />
-          </div>
-          </button>}
-       
-        />
+        style={{zIndex:'0',}}
 
 
-{/* <div style={{position:'absolute', bottom:'0', left:'0', zIndex:'1', width:'100vw', height:'100%', border:'0px solid yellow', padding:'0', margin:'0'}}>
-<StaticImage className=""
-alt="Todd Lambert Web development for photographers" src="../../static/assets/shawshank-stuff.png" style={{height:'100vh'}}  />
-</div> */}
+        config={{
+          file: {
+            attributes: {
+              crossorigin: "anonymous",
+            },
+          },
+          youtube: {
+            playerVars: { showinfo:0, autoplay:1, controls:0, start:20, end:120, mute:1, loop:1  }
+          },
+        }}
+      />
 
-        {/* <Controls
-          ref={controlsRef}
-          onPlayPause={handlePlayPause}
-          playing={playing}
-          played={played}
-          onMute={hanldeMute}
-          muted={muted}
-        /> */}
+
     
    
 {/* Panel Video */}
@@ -156,6 +98,10 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sh
 
 
 {/* Panel Content */}
+
+<div id="" className="wrap-element tronpanel" style={{position:'absolute', top:'0', zIndex:'2', overflow:'', height:'100vh', width:'100vw'}}>
+
+
 <h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'1', zIndex:'0'}}>
       <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
     </h1>
@@ -204,10 +150,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sa
           </a>
     <div>
 
-{/* <div>
-<p style={{fontSize:'clamp(1rem, 1.5vw, 2rem)', marginTop:'2rem', background:'rgba(0, 0, 0, .4)', padding:'1rem', borderRadius:'12px'}}>Clu was originally a search program created by Kevin Flynn to explore inside the ENCOM mainframe for proof he created ENCOM's most-popular games. Clu was found and destroyed by the Master Control Program. Flynn created another program named CLU after returning from the Grid with a more specific task in mind.
-</p>
-</div> */}
+
 </div>
 
 
@@ -225,7 +168,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sa
 
     </div>
     
-    
+    </div>
 
 
    

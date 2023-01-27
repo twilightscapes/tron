@@ -321,7 +321,7 @@ ref={useRef}
 
 
 
-  const playerRef = useRef(null);
+  // const playerRef = useRef(null);
 
 
   return (
