@@ -69,7 +69,7 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
 {/* c_V1iD6F1kk */}
 {/* nJ38P5elTkg */}
 <div id="homestart" style={{position:'absolute', top:'-100vh', height:'100vh'}}></div>
-<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', width:'100vw', height:'100vh'}}>
+<div id="" className="wrap-element tronpanel" style={{overflow:'hidden', top:'-10px', width:'100vw', height:'100vh'}}>
 
 
 
@@ -106,6 +106,11 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
           },
         }}
       />
+
+
+<div className="youblock" style={{position:'absolute', display:'flex',  height:'55px', width:'100%', zIndex:'0', top:'0', left:'0', textAlign:'center', color:'#fff', borderRadius:'0', padding:'12px 10px', background:'linear-gradient(180deg, rgb(7, 104, 115) 1%, rgb(2, 38, 43) 80%)', }}>
+tron.<a href="https://allin60.com">allin60.com</a>
+</div>
       {/* <div style={{position:'absolute', top:'0', zIndex:'2', display:'flex', justifyContent:'space-around', width:'100vw'}}> */}
 
       
@@ -127,32 +132,18 @@ const Panel1 = ({ youtuber, youtubecontrols, youtubestart, youtubeend, youtubemu
 
 
 {/* Panel Content */}
-<h1 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30%', opacity:'', zIndex:'1'}}>
+<h2 className="tronText" style={{display:'grid', placeContent:'center', textAlign:'center', fontSize:'14vw', position:'absolute', top:'0', marginTop:'', width:'100%', padding:'0 30% 0 30%', opacity:'', zIndex:'1'}}>
         <div className="TRON" style={{fontWeight:'normal', fontFamily:'TronType'}}>TRON</div>
-      </h1>
+      </h2>
 
-
-
-
- 
-
-
- {/* <div id="characters" className="characters" style={{position:'absolute', zIndex:'0', width:'', height:'', top:'0', background:'none', filter:'none', boxShadow:'none', padding:'0 0 0 0', border:'1px solid red', display:'flex', flexDiection:'column', justifyContent:'flex-end'}}> */}
-
- 
     
-
-
-    {/* </div>  */}
-    
-<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center',  position:'absolute', left:'', right:'', top:'10vh', zIndex:'1', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
+<div className="" style={{display:'flex', flexDiection:'', justifyContent:'center',  position:'absolute', left:'', right:'', top:'6vh', zIndex:'1', width:'100vw', margin:'0 auto', height:'', border:'0px solid red', textAlign:'center'}}>
 
    
 <div id="characters" className="characters" style={{display:'flex', flexDirection:'row', justifyContent:'space-around', position:'absolute', zIndex:'0', width:'', height:'', top:'', border:'0px solid yellow' }}>
 
 <div id="" className="" style={{position:'relative', display:'flex', justifyContent:'center', border:'0px solid red',}}>
          <Link to="/sam-flynn/" title="Sam Flynn"  aria-label="Sam Flynn">
-{/* <SamFlynn className="character" style={{height:'100vh', width:'90%', margin:'0 0 0 0',}} /> */}
 <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/sam-flynn.png" />
@@ -162,7 +153,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/sa
 <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
  padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 <Link to="/quorra" title="Quorra" aria-label="Quorra">
-  {/* <QuoraStand className="character" style={{height:'100%', width:'85%', margin:'0 0 0 10%', right:'', zIndex:''}} /> */}
   <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/quora.png" />
@@ -172,7 +162,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/qu
 <div id="" className="" style={{position:'relative', transform:'', maxWidth:'', height:'100vh',
  padding:' 0', display:'flex', justifyContent:'center',}}>
 <Link to="/kevin-flynn/" title="Kevin Flynn" aria-label="Kevin Flynn">
-{/* <KevinFlynn className="character" style={{position:'relative', height:'100%', width:'130%', zIndex:'', margin:'0 0 0 -16%'}} /> */}
 <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/kevin-flynn.png" />
@@ -183,7 +172,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/ke
 display:'flex', flexDiection:'column', justifyContent:'center',
 padding:'0', border:'0px solid red',}}>
   <Link to="/tron/" title="Tron" aria-label="Tron">
-{/* <TronGuy className="character" style={{height:'100%', width:'100%', margin:'0 0 0 0', transform: 'scaleX(-1)'}} /> */}
 <StaticImage className="character"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/tron.png" />
@@ -194,7 +182,6 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/tr
 // background:'rgba(6, 70, 90, 0.6)', 
 padding:' 0', display:'flex', justifyContent:'center', border:'0px solid red',}}>
 <Link to="/clu/" title="Clu" aria-label="Clu">
-{/* <CluGuy className="character evil" style={{height:'100%', width:'100%', margin:'0 0 0 -20%',}} /> */}
 <StaticImage className="character evil"
 style={{height:'', width:'', margin:'0 0 0 0',}}
 alt="Todd Lambert Web development for photographers" src="../../static/assets/clu.png" />
@@ -212,7 +199,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
         <div className="tronText TronType" style={{
-          display:'flex', justifyContent:'center', filter:'drop-shadow(2px 2px 2px #000)', width:'80%', position:'absolute', top:'40vh', left:'10%',  padding:'2% 1rem', borderRadius:'200px', border:'3px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333', zIndex:'2',
+          display:'flex', justifyContent:'center', filter:'drop-shadow(2px 2px 2px #000)', width:'70%', position:'absolute', top:'40vh', left:'10%',  padding:'1% 0', borderRadius:'200px', border:'0px dotted #04e2ff', lineHeight:'200%', fontSize:'clamp(1.2rem, 3vw, 2.8rem)', color:'rgb(6, 232, 240)',  textShadow:'2px 2px 2px #333', zIndex:'2',
           }}>
             CHOOSE YOUR CHARACTER
             </div>
@@ -229,16 +216,7 @@ alt="Todd Lambert Web development for photographers" src="../../static/assets/cl
 
 
 {/*  */}
-{/* Image Gallery */}
 
-  {/* {data.allFile.edges.map(edge => {
-  return <GatsbyImage
-  image={edge.node.childImageSharp.gatsbyImageData}
-  srl_gallery_image="true"
-  alt={edge.node.name}
-  key={edge.node.id}
-/>
-})} */}
 
 
 

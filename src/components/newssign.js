@@ -22,12 +22,7 @@ input::placeholder {
 
 
 
-    @media (max-width: 58em) {
 
-
-      .signbox input{margin-bottom:10px; margin-right:20px;}
-
-    }
 
 
 }
@@ -41,8 +36,8 @@ const NewsletterPage = () => (
 <CustomBox style={{}}> 
 
 
-<form  style={{width:'90%', margin:'0 auto 10vh auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
-  backdropFilter: 'blur(4px)', border:'1px solid #000', borderRadius:'12px', textAlign:'center', alignSelf:'center', overflow:'hidden', color:'#fff'}}
+<form  style={{width:'90%', margin:'10% auto 0 auto', display:'flex', flexDirection:'column', justifyContent:'center', background: 'rgba(0,0,0,0.50)',
+  backdropFilter: 'blur(4px)', border:'1px solid #000', borderRadius:'12px', textAlign:'center', alignSelf:'center', overflow:'hidden', color:'#fff', marginTop:'10%'}}
           className="contact-form"
           action="/signedup/"
           name="ts-news"
@@ -54,11 +49,11 @@ const NewsletterPage = () => (
 
 
             
-              <div className="txtshadow" style={{fontSize:'clamp(1.4rem, 1.5vw, 1.5rem)', textAlign:'center', marginTop:'10px'}}><strong>Get All The Latest Minutes</strong></div>
+              <div className="txtshadow" style={{fontSize:'clamp(1rem, 1.5vw, 1.5rem)', textAlign:'center',}}><strong>Get All The Latest Minutes</strong></div>
               <br />
               <span className="txtshadow" style={{fontSize:'95%'}}>Get notified when NEW Minutes drop </span>
 
-             <div className="signbox" style={{display:'flex', gap:'10px'}}>
+             <div className="signbox" style={{display:'flex', gap:'10px' ,justifyContent:'center'}}>
              
              
 
@@ -76,9 +71,8 @@ const NewsletterPage = () => (
 
             <button
               className="button"
-              
               type="submit"
-              style={{marginTop:'-8px', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
+              style={{marginTop:'', fontSize:'clamp(1rem, 1.5vw, 1.5rem)', whiteSpace:'nowrap'}}
             >
               Notify Me&nbsp;{" "}
               <span className="icon -right">

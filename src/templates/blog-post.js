@@ -352,16 +352,17 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
  }}>
 
-  <AnchorLink to="#top" style={{}}>
-  <RxDoubleArrowUp />
-        </AnchorLink>
+<AnchorLink to="#top" aria-label="Return To Top" style={{}}>
+  <RxDoubleArrowUp style={{marginTop:'4px'}} />
+</AnchorLink>
 
 
-        <label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{cursor:'pointer'}}>Menu</label>
+        <label id="menuicon1" htmlFor="openSidebarMenu" className="sidebarIconToggle1" style={{cursor:'pointer',
+		filter:'saturate(1) drop-shadow(3px 4px 10px rgb(0, 225, 255))', color:'rgb(0, 225, 255)'}}>Menu</label>
 
 
     {ShareThis ? (
-<AnchorLink to="#sharethis" style={{}}>
+<AnchorLink to="#sharethis" aria-label="Please share" style={{}}>
   Share
         </AnchorLink>
  ) : (
@@ -369,7 +370,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 )}
 
 {Comments ? (
-          <AnchorLink to="#comments" style={{}}>
+          <AnchorLink to="#comments" aria-label="Leave a comment" style={{}}>
   Comments
         </AnchorLink>
        
@@ -379,7 +380,7 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
 {ShowOriginal ? (
-          <AnchorLink to="#original" style={{}}>
+          <AnchorLink to="#original" aria-label="View Original Video" style={{}}>
   Credits
         </AnchorLink>
        
@@ -413,6 +414,12 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
 
+
+
+
+
+
+
 {FrontImage ? (
             <GatsbyImage
               image={FrontImage}
@@ -428,8 +435,8 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 
 
 
-
-    <Player
+ 
+      <Player
     // ref={playerRef}
         youtuber={YouTuber}
         youtubecontrols={YouTubeControls}
@@ -438,7 +445,10 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
         youtubemute={YouTubeMute}
         youtubeloop={YoutubeLoop}
         youtubeautostart={YouTubeAutostart}
+        playing={true}
       />
+ 
+    
 
 
 
@@ -477,7 +487,16 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
           )}
 
 
+{!YouTubeControls ? (
+  <div className="youblock" style={{position:'absolute', display:'flex', background:'', height:'45px', width:'100%', zIndex:'0', bottom:'0', left:'0', textAlign:'center', color:'', padding:'10px', border:'0px solid' }}></div>
 
+          ) : (
+          ""
+          )}
+
+<div className="youblock" style={{position:'absolute', display:'flex',  height:'55px', width:'100%', zIndex:'0', top:'0', left:'0', textAlign:'center', color:'#999', background:'#000', padding:'12px 10px' }}></div>
+
+  
 {ContentinVideo ? (
   <div id="contentvideo"
         className="blog-post-content" style={{ fontSize:'1.1rem', textAlign:'left', aspectRatio:'16/9', padding:'', margin:'0 auto', color:'inherit !important', border:'1px solid transparent', position:'absolute', bottom:'0', left:'0', top:'0', right:'0', zindex:'1',}}
@@ -488,9 +507,6 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
 )}
 
 
-        
-
-
 
  {Svg ? (
   <AddSvg />
@@ -499,11 +515,15 @@ textShadow:'2px 2px 0 #222', filter:'drop-shadow(0px 0px 5px rgba(155,155,155,1)
        )}
 
 
-        </div>
+
+<div style={{position:'absolute', width:'160px', zIndex:'1', top:'12px', left:'15px',}}>
+  tron.<a href="https://allin60.com">allin60.com</a></div>
+
+</div>
+{/* end video */}
 
 
 
-      {/* </div> */}
 
 
 
@@ -702,7 +722,7 @@ Click to play original video
    <br />
    </CustomBox>
 
-   <section id="footer" style={{height:'100vh', marginTop:'',  }}>
+   <section id="footer" style={{height:'', marginTop:'',  }}>
    <Footer />
    <GoBack /></section>
     </Layout>

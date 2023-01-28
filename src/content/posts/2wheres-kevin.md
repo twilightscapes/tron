@@ -6,7 +6,7 @@ date: 2021-02-01 01:43
 description: Where is Kevin Flynn? Presumed dead after missing for 30 years. 
 youtuber: "https://youtu.be/ueQSIDYz_R4"
 youtuber2: ""
-youtubeshoworiginal: "1"
+youtubeshoworiginal: true
 youtubersuggestion1: ""
 youtubersuggestion2: ""
 youtubersuggestion3: ""
@@ -20,8 +20,8 @@ youtubecontrols: false
 youtubeautostart: true
 isnftforsale: ""
 svgzindex: "0"
-comments: "1"
-shareable: "1"
+comments: true
+shareable: true
 underlayImage: /assets/transparent.png
 featuredImage: /assets/tron/where-is-kevin-flynn.jpg
 svgImage: /assets/tron/whereskevin.svg

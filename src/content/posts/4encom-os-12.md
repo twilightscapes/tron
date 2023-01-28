@@ -6,7 +6,7 @@ date: 2021-04-01 01:43
 description: Sam Flynn broke into Encom tower, hacked the OS, releaseed it to the world for free, and then dove off the top of the building. The least you could do is download it!
 youtuber: "https://youtu.be/Qeh3E67brBs"
 youtuber2: ""
-youtubeshoworiginal: "1"
+youtubeshoworiginal: true
 youtubersuggestion1: ""
 youtubersuggestion2: ""
 youtubersuggestion3: ""
@@ -20,8 +20,8 @@ youtubecontrols: false
 youtubeautostart: true
 isnftforsale: ""
 svgzindex: "0"
-comments: "1"
-shareable: "1"
+comments: true
+shareable: true
 underlayImage: ""
 featuredImage: /assets/encom-os-12.jpg
 svgImage: 

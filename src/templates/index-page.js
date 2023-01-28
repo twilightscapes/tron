@@ -248,11 +248,11 @@ const HomePage = ({ data }) => {
 
 {/* <HomeHolder /> */}
 
-<div className="horizontal-holder allin60panel" style={{position:'relative', borderRadius:'12px', top:'0', height:'100vh'}}>
+<div className="horizontal-holder allin60panel" style={{position:'relative', borderRadius:'12px', top:'0', height:'100vh', background:'transparent'}}>
 {/* <div className="RArrow"><span></span></div> */}
 
 
-<div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0', borderRadius:'12px',}}>
+<div id="" className="wrap-element " style={{overflow:'', width:'100vw', height:'100vh', position:'fixed', top:'0', zIndex:'0', borderRadius:'12px'}}>
 
 
           <ReactPlayer
@@ -263,8 +263,8 @@ const HomePage = ({ data }) => {
         loop={true}
         autoPlay={true}
         muted={true}
-        style={{zIndex:'0',}}
-
+        style={{zIndex:'0', opacity:'.8', height:'100vh'}}
+        playing={true}
 
         config={{
           file: {
@@ -305,14 +305,14 @@ const HomePage = ({ data }) => {
 
 
 <div className="donation2 allin60panel fire" style={{display:'grid',
-  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative', background:'rgba(0,0,0,0.50)',}}>
+  placeContent:'center', width:'100vw', height:'100vh', justifyContent:'center', position:'relative',}}>
 
 
 
-<FrontLoader style={{positon:'absolute', top:'0', left:'', right:'', width:'100vw', height:'',}} />
+<FrontLoader style={{positon:'absolute', top:'', left:'', right:'', width:'100vw', height:'',}} />
 
-<div className="logointro" style={{position:'absolute', top:'20vh', width:'100vw', textAlign:'center', zIndex:'-1'}}>
-<div className="TronType tronText" style={{fontSize:'12vw', margin:'0 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem,', color:'#fff'}}><div className="defont" style={{color:'rgb(0, 225, 255)', marginTop:'2vh'}}>in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
+<div className="logointro" style={{position:'absolute', top:'', width:'100vw', textAlign:'center', zIndex:'-1'}}>
+<div className="TronType tronText" style={{fontSize:'12vw', margin:'10% 0 0 0'}}>TRON</div><div  style={{fontSize:'5vw', fontWeight:'bold', marginTop:'.5rem,', color:'#fff'}}><div className="defont" style={{color:'rgb(0, 225, 255)', marginTop:'2vh', filter:'saturate(1) drop-shadow(7px 7px 1px rgb(0, 0, 0, .6)) '}}>in 60</div></div><div className="TRON tronText" style={{fontSize:'4vw', margin:'0 0 1rem 0'}}>Seconds</div>
 </div>
   {/* <h1 className="tronText " style={{fontSize:'7vw', padding:'3vh 8vw 20vh 8vw', position:'', top:'', border:'0px solid', diplay:'grid', placeContent:'center', maxWidth:'80vw', fontFamily:''}}>
     <div className="lineOne">TRON in 60 Seconds</div> <div className="lineTwo">In 60 Seconds?</div>
@@ -403,7 +403,7 @@ alt="Mystery Science Theater 3000 - All In 60 Seconds" src="../../static/assets/
 
 <div className="allin60panel" style={{position:'', border:'0px solid yellow', display:'flex', flexDirection:'column', justifyContent:'flex-start', alignItems:'center', width:'100vw', height:'100vh', paddingTop:'0', background:''}}>
 
-<div style={{ background:'rgba(0,0,0,0.10)', width:'80vw', position:'relative', top:'', margin:'10vh auto', padding:'4% 5%', zIndex:'1', textAlign:'', border:'1px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
+<div style={{ background:'', width:'80vw', position:'relative', top:'', margin:'2% auto', padding:'0 5%', zIndex:'1', textAlign:'', border:'0px solid #000', borderRadius:'12px', textDecoration:'none', color:'#cccc'}}>
   <Newsignup />
   </div>
 </div>

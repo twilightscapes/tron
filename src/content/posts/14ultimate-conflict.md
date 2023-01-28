@@ -6,7 +6,7 @@ date: 2021-10-11 01:23
 description: The Ultimate Conflict
 youtuber: "https://youtu.be/JoX0bNYg1Wc"
 youtuber2: ""
-youtubeshoworiginal: "1"
+youtubeshoworiginal: true
 youtubersuggestion1: ""
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
@@ -20,8 +20,8 @@ youtubecontrols: false
 youtubeautostart: true
 isnftforsale: ""
 svgzindex: "0"
-comments: "1"
-shareable: "1"
+comments: true
+shareable: true
 underlayImage: /assets/transparent.png
 featuredImage: /assets/ultimate-conflict.jpg
 svgImage: 
@@ -34,7 +34,7 @@ contentinvideo: true
 
 
 
-<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100vh; width:100vw; overflow:hidden; display:flex; ">
+<div style="position:relative; top:0; z-index:0; border:px solid blue; height:100%; width:100vw; overflow:hidden; display:flex; ">
 
 
 
@@ -49,9 +49,9 @@ contentinvideo: true
 
 
 
-<div class="" style="position:relative; z-index:0; width:80vw; margin:0 auto; height:100%;  font-size:clamp(.7rem, 2vw, 1.2rem); left:;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.20); border-radius:12px; border:0px solid yellow; text-align:center;">
+<div class="" style="position:relative; z-index:0; width:80vw; margin:0 auto; height:100%;  font-size:clamp(.7rem, 2vw, 1.2rem); left:;, top:0; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.20); border-radius:12px; border:0px solid yellow; text-align:center;">
 
-<blockquote class="tronText" style="line-height:150%; margin:2rem auto 0 auto; width:80%;">
+<div class="tronText" style="line-height:150%; margin:10% auto 0 auto; width:80%; font-size:clamp(.8rem, 2.2vw, 4.2rem);">
 <p>You promised that we would
   <br />
 change the world, together.</p>
@@ -62,7 +62,7 @@ change the world, together.</p>
 <br />
 <p class="TRON" style="font-size:60%;">I created the <span class="neonText">perfect system!</span></p>
 <br /><br />
-</blockquote>
+</div>
 </div>
 
 

@@ -6,7 +6,7 @@ date: 2021-11-11 01:23
 description: The end of the Grid
 youtuber: "https://youtu.be/J-FkR8L2X5E"
 youtuber2: ""
-youtubeshoworiginal: "1"
+youtubeshoworiginal: true
 youtubersuggestion1: ""
 youtubersuggestion2: "https://youtu.be/UfWnQuAxa5Y"
 youtubersuggestion3: "https://youtu.be/LE5m5aawuao"
@@ -20,8 +20,8 @@ youtubecontrols: false
 youtubeautostart: true
 isnftforsale: ""
 svgzindex: "0"
-comments: "1"
-shareable: "1"
+comments: true
+shareable: true
 underlayImage: /assets/transparent.png
 featuredImage: /assets/end-of-the-grid.jpg
 svgImage: 

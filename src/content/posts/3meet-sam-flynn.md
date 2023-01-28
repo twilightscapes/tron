@@ -6,7 +6,7 @@ date: 2021-03-11 01:43
 description: Tron in ONLY 60 seconds
 youtuber: "https://youtu.be/loGNj5jJBTQ"
 youtuber2: ""
-youtubeshoworiginal: ""
+youtubeshoworiginal: true
 youtubersuggestion1: ""
 youtubersuggestion2: ""
 youtubersuggestion3: ""
@@ -20,11 +20,11 @@ youtubecontrols: false
 youtubeautostart: true
 isnftforsale: ""
 svgzindex: "0"
-comments: "1"
-shareable: "1"
-underlayImage: /assets/transparent.png
+comments: true
+shareable: true
+underlayImage: 
 featuredImage: /assets/meet-sam-flynn.jpg
-svgImage: /assets/null.svg
+svgImage: 
 nftlink: ""
 nftdrop: ""
 nftredeem: ""

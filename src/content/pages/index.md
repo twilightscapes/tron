@@ -10,7 +10,7 @@ youtuber: "https://youtu.be/14zqZsUzplg"
 youtubeautostart: true
 title: All In 60 Seconds
 svgImage: /assets/null.svg
-showPosts: "1"
+showPosts: true
 cta:
   ctaText: How does this work?
   ctaLink: /howitworks/
